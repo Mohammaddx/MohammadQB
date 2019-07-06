@@ -27,6 +27,7 @@ grid: {
 function Resume(){
     const Classess = useStyle();
 return(
+   
     <ResumeSection>
         <ResumeTitle>-Resume-</ResumeTitle>
 
@@ -80,6 +81,7 @@ return(
         </Grid>
 
     </ResumeSection>
+   
 )
 }
 export default Resume;
