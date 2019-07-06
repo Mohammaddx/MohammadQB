@@ -6,14 +6,21 @@ import {ResumeSection , ResumeTitle , ResumeETitle ,
 const useStyle = makeStyles({
 root: {
     width: '90%',
-    border: '1px solid #fff',
     margin: 'auto'
 },
 
 exAnded: {
     backgroundColor: '#000',
     borderRadius: '10px',
-    padding: '10px'
+    padding: '15px',
+    width: '80%',
+    margin: 'auto',
+    lineHeight: '1.4'
+},
+grid: {
+    borderBottom: '1px solid aqua',
+    textAlign: 'left',
+    lineHeight: '.6'
 }
 });
 
@@ -21,13 +28,13 @@ function Resume(){
     const Classess = useStyle();
 return(
     <ResumeSection>
-        <ResumeTitle>Resume</ResumeTitle>
+        <ResumeTitle>-Resume-</ResumeTitle>
 
         <Grid container className={Classess.root} spacing={5}>
             <Grid container sm={6} sx={12}>
-                <ResumeETitle>Experience</ResumeETitle>
+                <ResumeETitle>-Experience-</ResumeETitle>
                 <Grid container className={Classess.exAnded}>
-                <Grid item xs={12} >
+                <Grid item xs={12} className={Classess.grid}>
                     <Resumeh4>Full Stack developer</Resumeh4>
                     <ResumeSpan><i class="fas fa-calendar-alt"></i> 17/08/2017 - 21/02/2019 | Freelancer</ResumeSpan>
                     <ResumeP>I worked at freelancer website with team have 10 
@@ -35,7 +42,7 @@ return(
                          those members from all over the arab world.</ResumeP>
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} className={Classess.grid}>
                     <Resumeh4>Front-End Developer</Resumeh4>
                     <ResumeSpan><i class="fas fa-calendar-alt"></i> 11/01/2018 - to now | View Platform Company</ResumeSpan>
                     <ResumeP>I trained with View Platform company in Front End field ,
@@ -48,9 +55,9 @@ return(
 
 
             <Grid container sm={6} sx={12}>
-                <ResumeETitle>Eduation</ResumeETitle>
+                <ResumeETitle>-Eduation-</ResumeETitle>
                 <Grid container className={Classess.exAnded}>
-                <Grid item xs={12}>
+                <Grid item xs={12} className={Classess.grid}>
                     <Resumeh4>Full Stack Developer (python)</Resumeh4>
                     <ResumeSpan><i class="fas fa-calendar-alt"></i> 18/02/2018 - 27/03/2018 | One Million Aeab Programmer</ResumeSpan>
                     <ResumeP>I am one of the participants in the initiative of one million
@@ -59,7 +66,7 @@ return(
                          evaluation in the field in which I was</ResumeP>
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} className={Classess.grid}>
                     <Resumeh4>Computer Science</Resumeh4>
                     <ResumeSpan><i class="fas fa-calendar-alt"></i> 07/02/2016 - to now | <abbr title="Palestine Technical University - Kadoorie">PTUK</abbr></ResumeSpan>
                     <ResumeP>
