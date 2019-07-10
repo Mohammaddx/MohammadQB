@@ -1,26 +1,31 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
-import {ResumeSection , ResumeTitle , ResumeETitle , 
+import ReactWOW from 'react-wow';
+import '../../hover.css';
+import '../../animate.css';
+import {ResumeSection , ResumeHeader , ResumeTitle , ResumeETitle , 
     Resumeh4 , ResumeSpan , ResumeP} from './style';
 const useStyle = makeStyles({
 root: {
     width: '90%',
-    margin: 'auto'
+    margin: 'auto',
+    boxShadow: '1px 1px 25px 1px #aaa',
+    marginTop: '-20px',
+    backgroundColor:'#fff',
+    marginBottom: '20px;'
 },
 
 exAnded: {
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     borderRadius: '10px',
     padding: '15px',
     width: '80%',
     margin: 'auto',
-    lineHeight: '1.4'
 },
 grid: {
-    borderBottom: '1px solid aqua',
+    borderBottom: '1px solid #000',
     textAlign: 'left',
-    lineHeight: '.6'
 }
 });
 
@@ -29,10 +34,15 @@ function Resume(){
 return(
    
     <ResumeSection>
-        <ResumeTitle>-Resume-</ResumeTitle>
+        <ReactWOW animation='slideInDown'>
+        <ResumeHeader>
+        <ResumeTitle>Resume</ResumeTitle>
+        </ResumeHeader>
+        </ReactWOW>
 
+        <ReactWOW animation='slideInUp'>
         <Grid container className={Classess.root} spacing={5}>
-            <Grid container sm={6} sx={12}>
+            <Grid container sx={12}>
                 <ResumeETitle>-Experience-</ResumeETitle>
                 <Grid container className={Classess.exAnded}>
                 <Grid item xs={12} className={Classess.grid}>
@@ -55,7 +65,7 @@ return(
 
 
 
-            <Grid container sm={6} sx={12}>
+            <Grid container sx={12}>
                 <ResumeETitle>-Eduation-</ResumeETitle>
                 <Grid container className={Classess.exAnded}>
                 <Grid item xs={12} className={Classess.grid}>
@@ -79,7 +89,7 @@ return(
             </Grid>
             
         </Grid>
-
+        </ReactWOW>
     </ResumeSection>
    
 )

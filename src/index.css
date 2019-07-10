@@ -5,11 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)) , url("/images/background.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  
   
 }
 
@@ -22,7 +17,5 @@ code {
 html {
   height: 100vh;
   overflow-x: hidden;
-background-color: #0e0f10;
-overflow-y: hidden;
-  
+
 } 
